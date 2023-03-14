@@ -1,0 +1,126 @@
+.header {
+  background-color: $dark-blue;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+  }
+
+  &__search,
+  &__dropdown,
+  &__user-img,
+  &__cart-img {
+    fill: $platinum;
+    cursor: pointer;
+
+    &:hover {
+      fill: $dark-pink;
+      transition: all .2s;
+    }
+  }
+
+  &__cart-link {
+    position: relative;
+  }
+
+  &__cart-num {
+    position: absolute;
+    background-color: $dark-pink;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    @include font(12px, 14px);
+    color: $white;
+    top: -20px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__navigation {
+    position: absolute;
+    padding: 37px 73px 157px 34px;
+    right: 0;
+    background-color: $white;
+    display: none;
+  }
+
+  &__navigation--active {
+    display: block;
+  }
+
+  &__navigation-btn {
+    border: none;
+    background-color: $white;
+    right: 17px;
+    top: 20px;
+    padding: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__navigation-close {
+    fill: $pearl-blackberry;
+
+    &:hover {
+      fill: $dark-pink;
+      transition: all .2s;
+    }
+  }
+
+  &__title {
+    @include font(14px, 17px, 700);
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__navigation-inner {
+    margin-bottom: 20px;
+  }
+
+  &__navigation-title {
+    margin-bottom: 12px;
+    @include font(14px, 17px);
+    color: $dark-pink;
+    text-transform: uppercase;
+  }
+
+  &__navigation-list {
+    padding-left: 22px;
+  }
+
+  &__navigation-item {
+    padding-bottom: 11px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__navigation-link {
+    text-decoration: none;
+    color: $pearl-blackberry;
+    &:hover {
+      color: $dark-pink;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    margin: 0 34px 0 0;
+  }
+
+  &__logo {
+    margin: 0 41px 0 0;
+  }
+
+  &__user-link {
+    margin: 0 34px 0 0;
+  }
+}

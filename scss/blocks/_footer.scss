@@ -1,0 +1,133 @@
+.footer {}
+
+.footer-top {
+  background-image: url(../img/footer/footer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 87px 0 156px;
+  }
+
+  &__author {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__blockquote {
+    margin-top: 30px;
+    @include font(20px, 24px);
+    color: $dark-blue;
+
+    span {
+      @include font(20px, 24px, 400, italic);
+    }
+
+  }
+
+  &__item {
+    max-width: 557px;
+    padding: 0 97px 0 105px;
+  }
+
+  &__title {
+    @include font(24px, 40px, 700);
+    color: $dark-blue;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include font(18px, 30px, 700);
+    color: $dark-blue;
+    margin-bottom: 32px;
+  }
+
+  &__form-input {
+    padding: 19px 0 19px 22px;
+    border-radius: 17px 0 0 17px;
+    width: 256px;
+    background-color: $gainsborough;
+    border: none;
+
+    &::placeholder {
+      @include font(14px, 17px);
+      color: $dark-blue;
+      opacity: 0.67;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__form-btn {
+    width: 100px;
+    background-color: $dark-pink;
+    @include font(14px, 17px);
+    color: $white;
+    border: none;
+    border-radius: 0 22px 22px 0;
+
+  }
+
+}
+
+.footer-bottom {
+  background-color: $dark-blue;
+  padding: 24px 0 23px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    @include font(16px, 19px);
+    color: $snow-white;
+
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__social-link {
+    display: block;
+    background-color: $white;
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $dark-pink;
+
+      .footer-bottom__social-link--facebook,
+      .footer-bottom__social-link--instagram,
+      .footer-bottom__social-link--pinterest,
+      .footer-bottom__social-link--twitter {
+        fill: $white;
+      }
+    }
+
+    &--facebook,
+    &--instagram,
+    &--pinterest,
+    &--twitter {
+      fill: black;
+    }
+
+  }
+
+
+}
