@@ -1,0 +1,125 @@
+.product {
+  text-align: center;
+  margin-bottom: 95px;
+
+  &__title {
+    @include font(30px, 36px);
+    color: $dark-blue;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    @include font(14px, 17px);
+    color: #9F9F9F;
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  &-item {
+    width: 360px;
+    margin-bottom: 30px;
+    background-color: $ghostly-white;
+
+  }
+
+  &-item-overlay {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background: rgba(58, 56, 56, 0.86);
+      left: 0;
+    }
+  }
+
+  &-item:hover .product-item-overlay:before,
+  &-item:hover .product-item__btn {
+    display: block;
+  }
+
+  &-item__images {
+    display: block;
+  }
+
+  &-item__btn {
+    display: block;
+    padding: 14px 17px 13px 51px;
+    border: 2px solid $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(58, 56, 56, 0);
+    @include font(14px, 17px);
+    color: $white;
+
+    &:before {
+      background-image: url('../img/product/cart.svg');
+      width: 27px;
+      height: 25px;
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 14px;
+    }
+
+    &:hover {
+      background-color: $dark-pink;
+      cursor: pointer;
+    }
+  }
+
+  &-item__btn,
+  &-item-overlay:before {
+    display: none;
+  }
+
+  &-item__box {
+    padding: 25px 29px 20px 16px;
+    text-align: left;
+  }
+
+  &-item__title {
+    @include font(13px, 16px);
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 12px;
+
+  }
+
+  &-item__text {
+    @include font(14px, 17px, 300);
+    color: $grayish-green;
+    margin-bottom: 18px;
+  }
+
+  &-item__price {
+    color: $dark-pink;
+    font-weight: 400;
+  }
+
+  &__link {
+    padding: 15px 39px 14px;
+    border: 1px solid $bittersweet;
+    color: $bittersweet;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-pink;
+      color: $white;
+    }
+  }
+
+
+
+}

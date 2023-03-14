@@ -1,0 +1,27 @@
+.brand {
+  background-color: $pink;
+  display: flex;
+  margin: 0 0 65px;
+
+  &__title {
+      font-family: Lato;
+      @include font(48px,58px,900);
+      text-transform: uppercase;
+    }
+  
+  &__title-wrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 91px;
+    }
+  
+  &__subtitle {
+      display: block;
+      @include font(37px, 44px, 700);
+    }
+  
+  &__subtitle-highlighting {
+      color: $dark-pink;
+    }
+}
+
